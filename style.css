@@ -1,0 +1,47 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+.livenow {
+  width: 22px;
+  display: flex;
+  align-items: center;
+}
+.livenow > div:first-child {
+  background-color: hsla(0, 0%, 100%, 0.3);
+  background-color: red;
+  animation-delay: -0.1s;
+}
+.livenow > div {
+  vertical-align: middle;
+  width: 22px;
+  height: 22px;
+  border-radius: 100%;
+  position: absolute;
+  border: 3px solid red;
+  animation: livenow_animation 1.4s ease-in-out infinite;
+  animation-fill-mode: both;
+}
+.livenow > div:nth-child(2) {
+  animation-delay: 0.16s;
+}
+
+@keyframes livenow_animation {
+  0%,
+  80%,
+  100% {
+    transform: scale(0.2);
+    -webkit-transform: scale(0.2);
+  }
+  40% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+}
